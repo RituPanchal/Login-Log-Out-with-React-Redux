@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
-import PostListComponent from './Components/PostList.component';
+import { Route, Switch } from 'react-router-dom';
+import './App.css';
+import Navigation from './Components/navigation';
+import Home from './Components/Home/home.component';
+import Login from './Components/Login/login.component';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { googleauth } from './firebase';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <PostListComponent />
-        </div>
-      </div>
+      <React.Fragment>
+      <Navigation />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Home} />
+          <Route path="/login" exact component={Login}/>
+          <Route path="/logout" exact />
+
+          
+          
+        </Switch>
+      </React.Fragment>
     );
     
   }

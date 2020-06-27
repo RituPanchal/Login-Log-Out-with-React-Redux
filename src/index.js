@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import reducers from './Reducer/index';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import reducer from './Reducer';
+import Loading from './Components/Loading/loading.component';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-      <App />
-
-    </Provider>
+    <BrowserRouter>
+      <Provider store={createStore(reducer, applyMiddleware(thunk))}>
+        <Loading>
+          <App />
+        </Loading>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

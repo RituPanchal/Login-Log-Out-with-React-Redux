@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
-import PostListReducer from './postList';
-import userListReducer from './userList';
+import fetchDataReducer from './fetchdata';
+import fetchUserAuthDataReducer from './fetchUserAuthData';
+import loadingReducer from './loading';
 
-const reducers = combineReducers({postListCombined: PostListReducer, userListCombined: userListReducer});
+const reducer = combineReducers({ notes: fetchDataReducer, userAuthData: fetchUserAuthDataReducer, loadingStatus: loadingReducer});
 
-export default reducers;
+export default reducer;
