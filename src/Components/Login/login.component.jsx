@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import GoogleAuth from '../Login/googleAuth.component';
 import { connect } from 'react-redux';
-import {googleAuthAction, fetchGoogleAuthDetailsAction} from '../../Action';
+import { googleAuthAction, fetchGoogleAuthDetailsAction } from '../../Action';
+import './css/login.css';
 
 class Login extends Component{
     componentDidMount() {
@@ -9,11 +10,10 @@ class Login extends Component{
     }
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <button type="button" className="btn btn-outline-warning" onClick={() => { this.props.googleAuthAction() }}>Sign via Google</button>
+            <div className="login justify-content-center">
+                <div className="login-head">Please login here:</div>
+                    <button type="button" className="login-btn btn btn-outline-warning" onClick={() => { this.props.googleAuthAction() }}>Sign via Google</button>
                     <GoogleAuth/>
-                </div>
             </div>    
         )
     }

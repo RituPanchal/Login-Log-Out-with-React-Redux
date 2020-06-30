@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchGoogleAuthDetailsAction } from '../../Action/index';
 import { connect } from "react-redux";
+import "./css/login.css";
 
 class GoogleAuth extends Component{
     componentDidMount() {
@@ -9,8 +10,8 @@ class GoogleAuth extends Component{
     render() {
         if (!this.props.userAuthData) { return null;}
         return (
-            <div className="container">
-                Hi, {this.props.userAuthData.email}
+            <div className="name-heading">
+                Hi, {this.props.userAuthData.displayName}
             </div>
         )
     }

@@ -1,0 +1,50 @@
+.home {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.heading{
+    font-size: 20px;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.userDetails{
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    background-color: #F6E6E8;
+    text-align: center;
+    width: 450px !important;
+}
+
+.form-control{
+    width: 300px !important;
+    display: inline-block !important;
+}
+
+.btn-outline-success{
+    background-color: #B1D8B7 !important;
+    color:#28a745 !important;
+}
+.btn-outline-success:hover, .btn-outline-success:active, .btn-outline-success:visited {
+    background-color: #B1D8B7 !important;
+    color: white !important;
+}
+.btn-outline-warning{
+    background-color: #FFF4BD !important;
+    color:#ffc107 !important;
+}
+.btn-outline-warning:hover, .btn-outline-warning:active, .btn-outline-warning:visited {
+    background-color: #FFF4BD !important;
+    color: white !important;
+}
